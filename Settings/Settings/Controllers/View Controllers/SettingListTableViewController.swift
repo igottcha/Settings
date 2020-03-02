@@ -23,9 +23,21 @@ class SettingListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath) as? SettingTableViewCell else {return UITableViewCell()}
         let setting = SettingController.settings[indexPath.row]
-
         cell.updateViews(with: setting)
-        
+        // Step 4
+        cell.delegate = self
         return cell
+    }
+}
+
+extension SettingListTableViewController: SettingTableViewCellDelegate {
+    
+    // Step 3
+    func settingSwitchTapped(for cell: SettingTableViewCell) {
+        /// TBVC -> ModelController to update the isOn -> Cell Update
+         guard let index = tableView.indexPath(for: cell) else {return}
+        let setting = SettingController.settings[index.row]
+        SettingController.toggleIsOn(for: setting)
+        cell.updateViews(with: setting)
     }
 }

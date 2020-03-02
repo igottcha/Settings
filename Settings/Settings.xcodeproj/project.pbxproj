@@ -49,7 +49,6 @@
 				FB160A6F23F756B80092DB05 /* AppDelegate.swift */,
 				FB160A7123F756B80092DB05 /* SceneDelegate.swift */,
 				FB160A7823F756B90092DB05 /* Assets.xcassets */,
-				FB160A7A23F756B90092DB05 /* LaunchScreen.storyboard */,
 				FB160A7D23F756B90092DB05 /* Info.plist */,
 			);
 			path = Resources;
@@ -84,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				9E70A6A8240D905B0009239F /* SettingListTableViewController.swift */,
-				9E70A6A6240D8FC30009239F /* SettingTableViewCell.swift */,
+				9E70A6AA240DA85D0009239F /* Custom Views */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -93,8 +92,17 @@
 			isa = PBXGroup;
 			children = (
 				9E56EAE9240D7DDC00327477 /* SettingController.swift */,
+				FB160A7A23F756B90092DB05 /* LaunchScreen.storyboard */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		9E70A6AA240DA85D0009239F /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E70A6A6240D8FC30009239F /* SettingTableViewCell.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		FB160A6323F756B80092DB05 = {
