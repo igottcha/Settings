@@ -12,7 +12,7 @@ class SettingController {
     
     //MARK: - Source of Truth
     
-    let settings: [Setting] = {
+   static let settings: [Setting] = {
         let music = Setting(name: "Music" , icon: #imageLiteral(resourceName: "iTunes"), isOn: false)
         let appStore = Setting(name: "App Store", icon: #imageLiteral(resourceName: "appStore"), isOn: false)
         let iBooks = Setting(name: "iBooks", icon: #imageLiteral(resourceName: "iBooks"), isOn: false)
