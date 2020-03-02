@@ -11,6 +11,7 @@ import Foundation
 class SettingController {
     
     //MARK: - Source of Truth
+    
     let settings: [Setting] = {
         let music = Setting(name: "Music" , icon: #imageLiteral(resourceName: "iTunes"), isOn: false)
         let appStore = Setting(name: "App Store", icon: #imageLiteral(resourceName: "appStore"), isOn: false)
@@ -22,6 +23,6 @@ class SettingController {
     //MARK: - Methods
     
     func toggleIsOn(for setting: Setting) {
-        
+        setting.isOn = !setting.isOn
     }
 }
